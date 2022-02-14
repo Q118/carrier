@@ -1,0 +1,1 @@
+-- In this file, write insert queries to populate the carrier table 

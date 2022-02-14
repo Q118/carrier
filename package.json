@@ -1,0 +1,25 @@
+{
+  "name": "carrier",
+  "version": "1.0.0",
+  "description": "A sample app to add, delete, update and view carrier information",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Q118/carrier.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Q118/carrier/issues"
+  },
+  "homepage": "https://github.com/Q118/carrier#readme",
+  "dependencies": {
+    "express": "^4.17.2",
+    "express-handlebars": "^6.0.2",
+    "mysql": "^2.18.1"
+  }
+}
