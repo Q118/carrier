@@ -19,5 +19,5 @@ SQL queries
 Code
 What could you have done different?
 
-
+run mysql command with prefix:
 /c/'Program Files'/MySQL/'MySQL Server 8.0'/bin
