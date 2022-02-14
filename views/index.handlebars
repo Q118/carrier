@@ -1,0 +1,69 @@
+<!-- change to sushi info! -->
+
+<h1>Sushi Rolls!</h1>
+
+<div class="img-container1">
+    <img src="/assets/sushi.gif" alt="moving sushi" width=250 />
+</div>
+
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="card">
+                <div class="card-header">
+                    <h2>Sushi rolls ready to devour!</h2>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">🍣🍱🍣🦪🍣🍤🍣🍱🍣🦪🍣🍤🍣</h5>
+                    <div class="card-text">
+                        <ul>
+                            {{#each rolls}}
+                            {{#unless devoured}}
+                            {{> rolls/roll-block devoured=true}}
+                            {{/unless}}
+                            {{/each}}
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="card">
+                <div class="card-header">
+                    <h2>These Devoured Rolls Were <em>Soy</em> Yummy!</h2>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">🍣🍱🍣🦪🍣🍤🍣🍱🍣🦪🍣🍤🍣</h5>
+                    <div class="card-text">
+
+                        <ul>
+                            {{#each rolls}}
+                            {{#if devoured}}
+                            {{> rolls/roll-block devoured=false}}
+                            {{/if}}
+                            {{/each}}
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--form to submit new rolls -->
+<div class="container m-2">
+    <div class="row">
+        <div class="col-sm-5 new-roll p-2">
+            <h2>Add a Roll</h2>
+            <form class="create-form">
+                <div class="form-group">
+                    <label for="roll">Roll Name:</label>
+                    <input type="text" id="ro" name="roll_name" placeholder="yummy roll">
+                </div>
+                <button type="submit">Add Roll</button>
+            </form>
+        </div>
+
+    </div>
+</div>

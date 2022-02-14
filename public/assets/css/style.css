@@ -1,0 +1,38 @@
+body {
+    background-image: url("background.jpg");
+}
+
+img {
+    border-color: black;
+    border-width: 7px;
+    border-style: groove;
+    text-align: center;
+}
+
+.img-container1 {
+    text-align: center;
+
+}
+
+h1 {
+    text-align: center;
+    background-color: black;
+    color: white;
+
+}
+
+.card {
+    background-color: #525a39;
+    border-color: black;
+    border-width: 7px;
+    border-style: groove;
+    color: white;
+}
+
+.new-roll {
+    background-color: #d34b3b;
+    border-color: black;
+    border-width: 7px;
+    border-style: groove;
+    color: white;
+}
