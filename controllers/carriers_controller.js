@@ -20,6 +20,7 @@ router.post("/api/carriers", (req, res) => {
     carrier.insertOne(
         {
             carrier_name: req.body.carrier_name,
+            carrier_address: req.body.carrier_address,
             devoured: req.body.devoured
         },
         (result) => {

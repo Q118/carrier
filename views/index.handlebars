@@ -2,10 +2,6 @@
 
 <h1>Sushi Rolls!</h1>
 
-<div class="img-container1">
-    <img src="/assets/sushi.gif" alt="moving sushi" width=250 />
-</div>
-
 <div class="container mt-4">
     <div class="row">
         <div class="col-sm-6">
@@ -51,19 +47,4 @@
         </div>
     </div>
 </div>
-<!--form to submit new rolls -->
-<div class="container m-2">
-    <div class="row">
-        <div class="col-sm-5 new-roll p-2">
-            <h2>Add a Roll</h2>
-            <form class="create-form">
-                <div class="form-group">
-                    <label for="roll">Roll Name:</label>
-                    <input type="text" id="ro" name="roll_name" placeholder="yummy roll">
-                </div>
-                <button type="submit">Add Roll</button>
-            </form>
-        </div>
-
-    </div>
-</div>
+{{> form-block }}
