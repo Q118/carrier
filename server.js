@@ -1,5 +1,5 @@
 const express = require("express");
-const exphbs = require("express-handlebars");
+const exphbs  = require("express-handlebars");
 const routes = require("./controllers/carriers_controller.js");
 
 const PORT = process.env.PORT || 8080;
@@ -15,7 +15,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 // Set Handlebars.
-app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+app.engine("handlebars", exphbs.engine({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
 // Import routes and give the server access to them.
