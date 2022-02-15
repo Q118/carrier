@@ -1,49 +1,37 @@
-// Make sure here that we wait to attach our handlers until the DOM is fully loaded.
 $(() => {
 
-    // todo: add logic to click on the row to edit the carriers info
-    $('.edit-button').click(function (e) {
+    let carrierChange;
+    let changeId;
+    $(".edit-button").click(function (e) {
         e.preventDefault();
-        // const id = $(this).data("id");
-        // const newEat = $(this).data("neweat");
-        // const newEatState = { value: newEat };
-        // // Send the PUT request.
-        // $.ajax(`/api/carriers/${id}/devoured`, {
-        //     type: "PUT",
-        //     // Convert object to JSON
-        //     data: JSON.stringify(newEatState),
-        //     // Tell the server that this request contains JSON
-        //     contentType: "application/json; charset=UTF-8",
-        // }).then(() => {
-        //     // Reload the page to get the updated list
-        //     location.reload();
-        // });
-
-        // log to console the id of the item that was clicked
-        console.log("You clicked on: " + $(this).data("id"));
+        carrierChange = $(this).data('id');
+        changeId = $(this).data('identifier');
+        console.log("You clicked on: " + carrierChange + " " + changeId); //debug
     });
 
-
+    let formSelectValue;
     // event listener for the form-select to listen once a new selection is made
-    $(".form-select").on("change", function (event) {
-        const formSelectValue = $(this).val();
-        console.log(formSelectValue); //debug
+    $(".form-select").on("change", function () {
+        formSelectValue = $(this).val();
+        //console.log(formSelectValue); //debug
         // remove  the hidden class from  the input
         $(".value-input").removeClass("hidden");
-
     })
 
 
-    $(".devour-button").on("click", function () {
-        const id = $(this).data("id");
-        const newEat = $(this).data("neweat");
-        const newEatState = { value: newEat };
+    $(".submit-update").click(function (e) {
+        e.preventDefault();
+        console.log(formSelectValue);
+        let value = $(".value-input").val();
+        const newEatState = { 
+            carrier:  carrierChange,
+            attribute: formSelectValue, 
+            value: value
+        };
         // Send the PUT request.
-        $.ajax(`/api/carriers/${id}/devoured`, {
+        $.ajax(`/api/carriers/${changeId}/update`, {
             type: "PUT",
-            // Convert object to JSON
             data: JSON.stringify(newEatState),
-            // Tell the server that this request contains JSON
             contentType: "application/json; charset=UTF-8",
         }).then(() => {
             // Reload the page to get the updated list

@@ -37,12 +37,11 @@ router.post("/api/carriers", (req, res) => {
     );
 });
 
-// using put to replace the value of devoured for a
-// specific carrier resource
-router.put("/api/carriers/:id/devoured", (req, res) => {
+// using put to replace the value of specified attribute
+router.put("/api/carriers/:id/update", (req, res) => {
     const condition = { id: req.params.id };
-    const update = { devoured: req.body.value };
-
+    const attribute = req.body.attribute;
+    const update = { [attribute]: req.body.value };
     carrier.updateOne(update, condition, (result) => {
         if (result.affectedRows === 0) {
             // If no rows were affected, then the ID must not exist, so 404
