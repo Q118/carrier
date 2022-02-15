@@ -18,24 +18,90 @@
 
 
 <!-- Button trigger modal -->
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-        Add New Carrier
-    </button>
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+    Add New Carrier
+</button>
 <!-- Modal -->
 <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
     aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+                <h5 class="modal-title" id="staticBackdropLabel">
+                    Carrier Details
+                </h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                ...
+
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">Name*</span>
+                    <input type="text" class="form-control" placeholder="Name" aria-label="Name"
+                        aria-describedby="basic-addon1" required="true" id="name-add">
+                </div>
+
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon2">Address*</span>
+                    <input type="text" class="form-control" placeholder="Address" aria-label="Address"
+                        aria-describedby="basic-addon2" required="true" id="address-add">
+                </div>
+
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon3">Additional Address</span>
+                    <input type="text" class="form-control" placeholder="Optional" aria-label="Address"
+                        aria-describedby="basic-addon3" required="false" id="address2-add">
+                </div>
+
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon4">City*</span>
+                    <input type="text" class="form-control" placeholder="City" aria-label="City"
+                        aria-describedby="basic-addon4" required="true" id="city-add">
+                </div>
+
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon5">State Initials*</span>
+                    <input type="text" class="form-control" placeholder="State" aria-label="State"
+                        aria-describedby="basic-addon5" required="true" id="state-add">
+                </div>
+
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon6">Zip*</span>
+                    <input type="text" class="form-control" placeholder="Zipcode" aria-label="Zip"
+                        aria-describedby="basic-addon6" required="true" id="zip-add">
+                </div>
+
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon7">Contact*</span>
+                    <input type="text" class="form-control" placeholder="Contact" aria-label="Contact"
+                        aria-describedby="basic-addon7" required="true" id="contact-add">
+                </div>
+
+
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon8">Phone*</span>
+                    <input type="text" class="form-control" placeholder="Phone" aria-label="Phone"
+                        aria-describedby="basic-addon8" required="true" id="phone-add">
+                </div>
+
+
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon9">Fax</span>
+                    <input type="text" class="form-control" placeholder="Optional Fax" aria-label="Fax"
+                        aria-describedby="basic-addon9" required="false" id="fax-add">
+                </div>
+
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon10">Email*</span>
+                    <input type="email" class="form-control" placeholder="Email" aria-label="Email"
+                        aria-describedby="basic-addon10" required="true" id="email-add">
+                </div>
+
+
+
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Add</button>
+                <button type="button" class="submit-new btn btn-primary" data-bs-dismiss="modal">Add</button>
             </div>
         </div>
     </div>

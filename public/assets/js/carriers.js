@@ -45,20 +45,24 @@ $(() => {
         });
     });
 
-    $(".create-form").on("submit", (event) => {
+
+
+    $(".submit-new").on("click", (event) => {
         // Make sure to preventDefault on a submit event.
         event.preventDefault();
+
         const newCarrier = {
-            roll_name: $("#ro").val().trim(),
+            carrier_name: $("#name-add").val().trim(),
         };
+        alert("Clicked");
         // Send the POST request.
-        $.ajax("/api/carriers", {
-            type: "POST",
-            data: newCarrier,
-        }).then(() => {
-            // Reload the page to get the updated list
-            location.reload();
-        });
+        // $.ajax("/api/carriers", {
+        //     type: "POST",
+        //     data: newCarrier,
+        // }).then(() => {
+        //     // Reload the page to get the updated list
+        //     location.reload();
+        // });
     });
 
     $(".delete-roll").on("click", function () {
