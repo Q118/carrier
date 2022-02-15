@@ -2,7 +2,8 @@
 $(() => {
 
     // todo: add logic to click on the row to edit the carriers info
-    $('#carrier-row').click(function () {
+    $('.edit-button').click(function (e) {
+        e.preventDefault();
         // const id = $(this).data("id");
         // const newEat = $(this).data("neweat");
         // const newEatState = { value: newEat };
@@ -17,7 +18,10 @@ $(() => {
         //     // Reload the page to get the updated list
         //     location.reload();
         // });
-        console.log("clicked" + $(this).data("class"));
+
+        // log to console the id of the item that was clicked
+        console.log("You clicked on: " + $(this).data("id"));
+
     });
 
 
