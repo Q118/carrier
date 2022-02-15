@@ -35,11 +35,8 @@ $(() => {
         });
     });
 
-
-
     $(".submit-new").on("click", (event) => {
         event.preventDefault();
-
         const newCarrier = {
             carrier_name: $("#name-add").val().trim(),
             carrier_address: $("#address-add").val().trim(),
