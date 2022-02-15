@@ -53,16 +53,25 @@ $(() => {
 
         const newCarrier = {
             carrier_name: $("#name-add").val().trim(),
+            carrier_address: $("#address-add").val().trim(),
+            address_2: $("#address2-add").val().trim(),
+            city: $("#city-add").val().trim(),
+            state_code: $("#state-add").val().trim(),
+            zip: $("#zip-add").val().trim(),
+            contact: $("#contact-add").val().trim(),
+            phone: $("#phone-add").val().trim(),
+            fax: $("#fax-add").val().trim(),
+            email: $("#email-add").val().trim(),
         };
-        alert("Clicked");
+        // console.log(newCarrier); //degbug
         // Send the POST request.
-        // $.ajax("/api/carriers", {
-        //     type: "POST",
-        //     data: newCarrier,
-        // }).then(() => {
-        //     // Reload the page to get the updated list
-        //     location.reload();
-        // });
+        $.ajax("/api/carriers", {
+            type: "POST",
+            data: newCarrier,
+        }).then(() => {
+            // Reload the page to get the updated list
+            location.reload();
+        });
     });
 
     $(".delete-roll").on("click", function () {

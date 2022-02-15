@@ -21,7 +21,14 @@ router.post("/api/carriers", (req, res) => {
         {
             carrier_name: req.body.carrier_name,
             carrier_address: req.body.carrier_address,
-            devoured: req.body.devoured
+            address_2: req.body.address_2,
+            city: req.body.city,
+            state_code: req.body.state_code,
+            zip: req.body.zip,
+            contact: req.body.contact,
+            phone: req.body.phone,
+            fax: req.body.fax,
+            email: req.body.email
         },
         (result) => {
             // Send back the ID of the new carrier
