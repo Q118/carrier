@@ -1,13 +1,20 @@
 body {
-    background: purple;
+    background: lightgray
 }
-
 
 h1 {
     text-align: center;
     background-color: black;
     color: white;
 
+}
+
+img {
+    margin: 20px;
+}
+
+.brand-container {
+    background-color: #f36422;
 }
 
 .card {
