@@ -1,4 +1,4 @@
-<table id="myTable" class="display" style="width:100%">
+<table class="table table-responsive-md table-dark table-striped">
         <thead>
             <tr>
                 <th>Name</th>
@@ -13,7 +13,23 @@
                 <th>Email</th>
             </tr>
         </thead>
-        <tfoot>
+        <tbody>
+            {{#each carriers}}
+            <tr>
+                <td>{{carrier_name}}</td>
+                <td>{{carrier_address}}</td>
+                <td>{{additional_address}}</td>
+                <td>{{city}}</td>
+                <td>{{state_code}}</td>
+                <td>{{zip}}</td>
+                <td>{{contact}}</td>
+                <td>{{phone}}</td>
+                <td>{{fax}}</td>
+                <td>{{email}}</td>
+            </tr>
+            {{/each}}
+        </tbody>
+        {{!-- <tfoot>
             <tr>
                 <th>Name</th>
                 <th>Address</th>
@@ -26,5 +42,5 @@
                 <th>Fax</th>
                 <th>Email</th>
             </tr>
-        </tfoot>
+        </tfoot> --}}
     </table>

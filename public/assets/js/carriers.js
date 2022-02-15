@@ -1,20 +1,6 @@
 // Make sure here that we wait to attach our handlers until the DOM is fully loaded.
 $(() => {
 
-    // $('#myTable').DataTable( {
-    //     // ajax: 'scripts/server_processing.php',
-    //     // here call to mysql to get the data
-    //     // ajax: '/',
-    //     // set the ajax property to folllow our carriers_controller.js logic and use the data from the sql db
-    //     ajax: '/api/carriers',
-    //     processing: true,
-    //     search: {
-    //         return: true
-    //     },
-    //     serverSide: true
-    // } );
-
-
 
 
     $(".devour-button").on("click", function () {
