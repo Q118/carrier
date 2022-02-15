@@ -23,11 +23,9 @@ $(() => {
     $(".create-form").on("submit", (event) => {
         // Make sure to preventDefault on a submit event.
         event.preventDefault();
-
         const newCarrier = {
             roll_name: $("#ro").val().trim(),
         };
-
         // Send the POST request.
         $.ajax("/api/carriers", {
             type: "POST",
