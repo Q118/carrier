@@ -1,43 +1,28 @@
 <!-- change to sushi info! -->
 
-<h1>Sushi Rolls!</h1>
+<h1>JEAR Carriers</h1>
+
+{{> form-block }}
 
 <div class="container mt-4">
     <div class="row">
         <div class="col-sm-6">
-            <div class="card">
-                <div class="card-header">
-                    <h2>Sushi rolls ready to devour!</h2>
-                </div>
-                <div class="card-body">
-                    <h5 class="card-title">🍣🍱🍣🦪🍣🍤🍣🍱🍣🦪🍣🍤🍣</h5>
-                    <div class="card-text">
-                        <ul>
-                            {{#each rolls}}
-                            {{#unless devoured}}
-                            {{> rolls/roll-block devoured=true}}
-                            {{/unless}}
-                            {{/each}}
-                        </ul>
-                    </div>
-
-                </div>
-            </div>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi mollitia dolor amet nesciunt culpa,
+            labore, rem soluta porro impedit voluptatem accusamus. Optio perspiciatis quisquam omnis maxime itaque
+            corporis repellendus porro!
         </div>
         <div class="col-sm-6">
             <div class="card">
                 <div class="card-header">
-                    <h2>These Devoured Rolls Were <em>Soy</em> Yummy!</h2>
+                    <h2>Registered Carriers</h2>
                 </div>
                 <div class="card-body">
                     <h5 class="card-title">🍣🍱🍣🦪🍣🍤🍣🍱🍣🦪🍣🍤🍣</h5>
                     <div class="card-text">
 
                         <ul>
-                            {{#each rolls}}
-                            {{#if devoured}}
-                            {{> rolls/roll-block devoured=false}}
-                            {{/if}}
+                            {{#each carriers}}
+                            {{> carrier-block devoured=false}}
                             {{/each}}
                         </ul>
                     </div>
@@ -45,6 +30,8 @@
                 </div>
             </div>
         </div>
+
+        {{!-- {{> table-block }} --}}
+
     </div>
 </div>
-{{> form-block }}

@@ -21,7 +21,6 @@ USE carriers_db;
 CREATE TABLE IF NOT EXISTS carriers (
     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     carrier_name VARCHAR(255) NOT NULL,
-    -- registration BOOL NOT NULL DEFAULT FALSE,
     carrier_address VARCHAR(255) NOT NULL,
     address_2 VARCHAR(255) NOT NULL,
     city VARCHAR(255) NOT NULL,
