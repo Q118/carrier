@@ -17,8 +17,9 @@
         {{#each carriers}}
         <tr class="{{carrier_name}}-row">
             <td>
-                {{carrier_name}}
-                <button type="submit" class="edit-button btn btn-success" data-id="{{carrier_name}}">
+                {{carrier_name}} <br>
+                <button type="submit" class="edit-button btn btn-success" data-id="{{carrier_name}}"
+                    data-bs-toggle="modal" data-bs-target="#staticEdit">
                     Edit
                 </button>
             </td>

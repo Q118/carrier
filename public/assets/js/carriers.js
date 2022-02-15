@@ -21,11 +21,17 @@ $(() => {
 
         // log to console the id of the item that was clicked
         console.log("You clicked on: " + $(this).data("id"));
-
     });
 
 
+    // event listener for the form-select to listen once a new selection is made
+    $(".form-select").on("change", function (event) {
+        const formSelectValue = $(this).val();
+        console.log(formSelectValue); //debug
+        // remove  the hidden class from  the input
+        $(".value-input").removeClass("hidden");
 
+    })
 
 
     $(".devour-button").on("click", function () {

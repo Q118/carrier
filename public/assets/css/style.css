@@ -36,3 +36,7 @@ h1 {
 .email-cell {
     word-wrap: break-word;
 }
+
+.hidden {
+    display: none;
+}
