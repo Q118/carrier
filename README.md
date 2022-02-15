@@ -1,8 +1,8 @@
 # carrier
 A sample app to add, delete, update and view carrier information
 
-JEAR needs the ability to add, delete, update and view carrier information. Code a page that tracks at a minimum the information in the table below. 
-Ideally this would be in visual studio using web forms with Sql Server database.
+<!-- insert image -->
+![](https://raw.githubusercontent.com/Q118/carrier/main/views/screenshot.jpg)
 
 ## To Run Locally:
 1. Download and open files in IDE
