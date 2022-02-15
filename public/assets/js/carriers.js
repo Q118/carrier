@@ -1,5 +1,4 @@
 $(() => {
-
     let carrierChange;
     let changeId;
     $(".edit-button").click(function (e) {
@@ -13,8 +12,6 @@ $(() => {
     // event listener for the form-select to listen once a new selection is made
     $(".form-select").on("change", function () {
         formSelectValue = $(this).val();
-        //console.log(formSelectValue); //debug
-        // remove  the hidden class from  the input
         $(".value-input").removeClass("hidden");
     })
 
@@ -23,12 +20,11 @@ $(() => {
         e.preventDefault();
         console.log(formSelectValue);
         let value = $(".value-input").val();
-        const newEatState = { 
-            carrier:  carrierChange,
-            attribute: formSelectValue, 
+        const newEatState = {
+            carrier: carrierChange,
+            attribute: formSelectValue,
             value: value
         };
-        // Send the PUT request.
         $.ajax(`/api/carriers/${changeId}/update`, {
             type: "PUT",
             data: JSON.stringify(newEatState),
@@ -42,7 +38,6 @@ $(() => {
 
 
     $(".submit-new").on("click", (event) => {
-        // Make sure to preventDefault on a submit event.
         event.preventDefault();
 
         const newCarrier = {
@@ -58,7 +53,6 @@ $(() => {
             email: $("#email-add").val().trim(),
         };
         // console.log(newCarrier); //degbug
-        // Send the POST request.
         $.ajax("/api/carriers", {
             type: "POST",
             data: newCarrier,
@@ -68,11 +62,9 @@ $(() => {
         });
     });
 
-    $(".delete-roll").on("click", function () {
+    $(".delete-button").on("click", function () {
         const id = $(this).data("id");
-
-        // Send the DELETE request.
-        $.ajax(`/api/carriers/${id}`, {
+        $.ajax(`/api/carriers/${id}/delete`, {
             type: "DELETE",
         }).then(() => {
             // Reload the page to get the updated list

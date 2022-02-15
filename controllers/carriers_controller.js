@@ -52,9 +52,8 @@ router.put("/api/carriers/:id/update", (req, res) => {
 });
 
 
-router.delete("/api/carriers/:id", (req, res) => {
+router.delete("/api/carriers/:id/delete", (req, res) => {
     const condition = { id: req.params.id };
-
     carrier.delete(condition, (result) => {
         if (result.affectedRows === 0) {
             // If no rows were changed, then the ID must not exist, so 404

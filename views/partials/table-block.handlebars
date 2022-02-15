@@ -19,8 +19,7 @@
             <td>
                 {{carrier_name}} <br>
                 <button type="submit" class="edit-button btn btn-success" data-id="{{carrier_name}}"
-                    data-bs-toggle="modal" data-bs-target="#staticEdit"
-                    data-identifier="{{id}}">
+                    data-bs-toggle="modal" data-bs-target="#staticEdit" data-identifier="{{id}}">
                     Edit
                 </button>
             </td>
@@ -32,7 +31,13 @@
             <td>{{contact}}</td>
             <td>{{phone}}</td>
             <td>{{fax}}</td>
-            <td class="email-cell">{{email}}</td>
+            <td class="email-cell">
+                {{email}}<br>
+                <button type="submit" class="delete-button btn btn-danger" data-id="{{id}}">
+                    Delete Carrier
+                </button>
+
+            </td>
         </tr>
         {{/each}}
     </tbody>

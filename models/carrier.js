@@ -17,7 +17,13 @@ const carrier = {
         orm.updateOne("carriers", carrierData, criteria, (res) => {
             cb(res);
         });
+
     },
+    delete: (criteria, cb) => {
+        orm.delete("carriers", criteria, (res) => {
+            cb(res);
+        });
+    }
 };
 
 module.exports = carrier;
