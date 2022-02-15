@@ -1,6 +1,27 @@
 // Make sure here that we wait to attach our handlers until the DOM is fully loaded.
 $(() => {
 
+    // todo: add logic to click on the row to edit the carriers info
+    $('#carrier-row').click(function () {
+        // const id = $(this).data("id");
+        // const newEat = $(this).data("neweat");
+        // const newEatState = { value: newEat };
+        // // Send the PUT request.
+        // $.ajax(`/api/carriers/${id}/devoured`, {
+        //     type: "PUT",
+        //     // Convert object to JSON
+        //     data: JSON.stringify(newEatState),
+        //     // Tell the server that this request contains JSON
+        //     contentType: "application/json; charset=UTF-8",
+        // }).then(() => {
+        //     // Reload the page to get the updated list
+        //     location.reload();
+        // });
+        console.log("clicked" + $(this).data("class"));
+    });
+
+
+
 
 
     $(".devour-button").on("click", function () {
